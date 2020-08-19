@@ -4,18 +4,19 @@ using System.Text;
 
 namespace InlineCalc
 {
-    class Program
+    public class InlineCalculator
     {
         static void Main(string[] args)
         {
             Console.WriteLine($"Answer is: {StringCalculator(Console.ReadLine())}");
         }
-        static double StringCalculator(string inlineStr)
+        public static double StringCalculator(string inlineStr)
         {
             //Operators which will be used
             char[] operators = { '*', '/', '+' };
             //inlineStr = inlineStr.Replace("--", "+");
             inlineStr =inlineStr.Replace("-","+-");//we don't calculate miunus so replace it with '+-'
+
 
 
             for (int i = 0; i < operators.Length; i++)//for all operators
